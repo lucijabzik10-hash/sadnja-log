@@ -1,4 +1,3 @@
-
 import discord
 from discord.ext import commands
 import os
@@ -7,13 +6,13 @@ import re
 from datetime import datetime
 
 # =========================================================
-# OVDJE LIJEPIS SVOJE ID-eve
+# TVOJI ID-evi
 # =========================================================
 SOURCE_CHANNEL_ID = 1487121538451771512
 LOG_CHANNEL_ID = 1487121637454381243
 PING_ROLE_ID = 1476259451353694313
 
-# Fajl gdje se cuva zadnji ID
+# Fajl gdje se čuva zadnji ID
 COUNTER_FILE = "/data/counter.json"
 
 # =========================================================
@@ -27,7 +26,7 @@ intents.messages = True
 bot = commands.Bot(command_prefix="!", intents=intents)
 
 # =========================================================
-# POMOCNE FUNKCIJE
+# POMOĆNE FUNKCIJE
 # =========================================================
 def ensure_counter_file():
     folder = os.path.dirname(COUNTER_FILE)
@@ -144,6 +143,10 @@ async def on_message(message: discord.Message):
 
 # =========================================================
 # POKRETANJE
-# =============================================
+# =========================================================
 TOKEN = os.getenv("DISCORD_TOKEN")
+
+if not TOKEN or TOKEN.strip() == "":
+    raise ValueError("DISCORD_TOKEN nije postavljen u Railway Variables.")
+
 bot.run(TOKEN)
