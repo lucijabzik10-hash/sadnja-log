@@ -145,10 +145,10 @@ async def on_message(message: discord.Message):
 # =========================================================
 # POKRETANJE
 # =============================================
-TOKEN = os.getenv("MTQ4NzExNzY4OTI5NzA0NzU3Mg.GlT1jj.zccHzW6aJ4rCr9sBYppEfxTGYjefyFUpNWSae8")
+TOKEN = os.getenv("MTQ4NzExNzY4OTI5NzA0NzU3Mg.GutIZe.rYiBL2yPoZ88R1Ub18_XEIHeuAUjdteu8Tqhig")
 
 
 if not TOKEN:
-    raise ValueError("MTQ4NzExNzY4OTI5NzA0NzU3Mg.GlT1jj.zccHzW6aJ4rCr9sBYppEfxTGYjefyFUpNWSae8")
+    raise ValueError("MTQ4NzExNzY4OTI5NzA0NzU3Mg.GutIZe.rYiBL2yPoZ88R1Ub18_XEIHeuAUjdteu8Tqhig")
 
 bot.run(TOKEN)
