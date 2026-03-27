@@ -9,9 +9,9 @@ from datetime import datetime
 # =========================================================
 # OVDJE LIJEPIS SVOJE ID-eve
 # =========================================================
-SOURCE_CHANNEL_ID = 111111111111111111
-LOG_CHANNEL_ID = 222222222222222222
-PING_ROLE_ID = 333333333333333333
+SOURCE_CHANNEL_ID = 1487121538451771512
+LOG_CHANNEL_ID = 1487121637454381243
+PING_ROLE_ID = 1476259451353694313
 
 # Fajl gdje se cuva zadnji ID
 COUNTER_FILE = "/data/counter.json"
@@ -144,10 +144,11 @@ async def on_message(message: discord.Message):
 
 # =========================================================
 # POKRETANJE
-# =========================================================
-TOKEN = os.getenv("DISCORD_TOKEN")
+# =============================================
+TOKEN = os.getenv("MTQ4NzExNzY4OTI5NzA0NzU3Mg.GlT1jj.zccHzW6aJ4rCr9sBYppEfxTGYjefyFUpNWSae8")
+
 
 if not TOKEN:
-    raise ValueError("DISCORD_TOKEN nije postavljen.")
+    raise ValueError("MTQ4NzExNzY4OTI5NzA0NzU3Mg.GlT1jj.zccHzW6aJ4rCr9sBYppEfxTGYjefyFUpNWSae8")
 
 bot.run(TOKEN)
